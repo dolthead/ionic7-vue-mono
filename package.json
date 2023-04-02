@@ -1,4 +1,4 @@
 {
   "name": "ionic-vue-pnpm-monorepo",
-  "private:": true
+  "private:": false
 }

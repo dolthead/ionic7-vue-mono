@@ -15,7 +15,7 @@
         @didDismiss="closeModal()"
         :presenting-element="($parent as any).$refs.ionRouterOutlet"
       >
-        <about-modal @onClose="closeModal" />
+        <AboutModal @onClose="closeModal" />
       </ion-modal>
       <ion-button @click="showModal">Open Modal</ion-button>
     </ion-content>
@@ -23,20 +23,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import {
-  IonContent,
-  IonButton,
-  IonButtons,
-  IonBackButton,
-  IonPage,
-  IonHeader,
-  IonTitle,
-  IonToolbar,
-  IonModal,
-} from '@ionic/vue'
-import AboutModal from '../components/AboutModal.vue'
-
 const modalIsOpen = ref(false)
 const showModal = () => {
   modalIsOpen.value = true
